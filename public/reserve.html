@@ -90,7 +90,35 @@
   const submitBtn = document.querySelector('.submit');
   submitBtn.addEventListener('click', (e) => {
     e.preventDefault();
+    // Question: What does this code do?
+        let custName = document.getElementById('reserve-name').value.trim();
+        let custPhone = document.getElementById('reserve-phone').value.trim();
+        let custEmail = document.getElementById('reserve-email').value.trim();
+        let custId = document.getElementById('reserve-unique-id').value.trim();
+        
+        let newCustomer = {
+          customerName: custName,
+          customerEmail: custEmail,
+          customerID: parseInt(custId),
+          customerPhone: custPhone,
+        };
 
+        // Question: What does this code do??
+        fetch('/api/tables', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(newCustomer),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+            alert(`Adding customer: ${data.customerName}`);
+          })
+          .catch((error) => {
+            console.error('Error:', error);
+          });
 
   });
 </script>

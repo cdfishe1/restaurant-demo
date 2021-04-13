@@ -1,0 +1,20 @@
+{
+  "name": "restaurant-demo",
+  "version": "1.0.0",
+  "description": "restaurant demo",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cdfishe1/restaurant-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cdfishe1/restaurant-demo/issues"
+  },
+  "homepage": "https://github.com/cdfishe1/restaurant-demo#readme"
+}
